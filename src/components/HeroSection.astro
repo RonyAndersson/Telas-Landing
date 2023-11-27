@@ -1,32 +1,26 @@
-<section
-    class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"
-data-header-color="white">
-    <div class="z-30 relative h-full flex flex-col">
-        <header>
-            <h2 class="text-white pt-40 text-[40px] font-medium">
-                Desfrute de Tesla
-            </h2>
-            <p class="text-white text-sm">Agende um Test Drive hoje mesmo</p>
-        </header>
+---
+import Section from "./Section.astro"
+---
 
-        <footer class="flex flex-grow flex-col justify-end pb-20">
-            <div>
-                <a
-                    class="text-white border-[3px] border-white bg-white/5 backdrop-blur-sm rounded font-medium px-12 py-2 hover:bg-white hover:text-black transition-colors duration-500"
-                    href="#">Agendar Test Drive</a
-                >
-            </div>
-        </footer>
-    </div>
+<Section
+  title="Desfrute de tesla"
+  subtitle="Realize um Test Drive hoje mesmo"
+  color="white"
+>
+  <div slot="footer">
+    <a
+      class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors duration-500"
+      href="#"
+    >
+      Agende um Test Drive</a
+    >
+  </div>
 
-    <!-- Video Homepage -->
-    <div class="absolute top-0 bottom-0 h-full z-10">
-        <video
-            class="object-center object-cover"
-            src="/video1.webm"
-            autoplay
-            muted
-            loop></video>
-    </div>
-    <!-- Fim div Video -->
-</section>
+  <video
+    slot="background"
+    class="object-center object-cover h-full w-full"
+    autoplay
+    muted
+    loop
+    src="/video.webm"></video>
+</Section>
